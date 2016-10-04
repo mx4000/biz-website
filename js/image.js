@@ -8,6 +8,7 @@ $(function () {
         }
         var Imagepath = $(this).context.children[0].src;
         $('.showImage').attr("src",Imagepath);
+        $('#block').addClass('blur-filter');
     });
 
     $('#show').on('click keyup', function(event) {
@@ -16,6 +17,7 @@ $(function () {
             var scrollTop = parseInt($('html').css('top'));
             $('html').removeClass('noscroll');
             $('html,body').scrollTop(-scrollTop);
+            $('#block').removeClass('blur-filter');
         }
     });
 });
